@@ -1,4 +1,4 @@
-# Thudarum E-Commerce - Deployment Guide
+# Kimhab Ork E-Commerce - Deployment Guide
 
 ## Pre-Deployment Checklist
 

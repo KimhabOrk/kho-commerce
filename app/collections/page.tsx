@@ -103,7 +103,7 @@ export default async function CollectionsPage() {
             <h2 className="font-serif text-3xl md:text-4xl md:text-5xl font-semibold mb-6">Crafted for Excellence</h2>
             <p className="text-muted-foreground mb-8 text-base md:text-lg leading-relaxed">
               Each collection is carefully curated to offer a distinct aesthetic while maintaining the exceptional
-              quality and attention to detail that defines Thudarum. From boardroom to ballroom, we have the perfect
+              quality and attention to detail that defines Kimhab Ork. From boardroom to ballroom, we have the perfect
               piece for every occasion.
             </p>
             <Button asChild size="lg" variant="outline" className="h-12 px-8 bg-transparent">

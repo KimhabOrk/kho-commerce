@@ -46,7 +46,7 @@ export function OrderHistory() {
     const events = [
       {
         status: "confirmed",
-        location: "Thudarum Headquarters",
+        location: "Kimhab Ork Headquarters",
         date: orderDate,
         description: "Order confirmed and payment received",
       },

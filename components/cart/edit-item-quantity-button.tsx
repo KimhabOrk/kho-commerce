@@ -10,12 +10,12 @@ function SubmitButton({ type }: { type: 'plus' | 'minus' }) {
     <button
       type="submit"
       aria-label={type === 'plus' ? 'Increase item quantity' : 'Reduce item quantity'}
-      className="px-2 py-1.5 sm:px-3 sm:py-2 hover:bg-secondary transition-colors"
+      className="px-2 py-1.5 md:px-3 md:py-2 hover:bg-secondary transition-colors"
     >
       {type === 'plus' ? (
-        <Plus className="h-3 w-3 sm:h-4 sm:w-4" />
+        <Plus className="h-3 w-3 md:h-4 md:w-4" />
       ) : (
-        <Minus className="h-3 w-3 sm:h-4 sm:w-4" />
+        <Minus className="h-3 w-3 md:h-4 md:w-4" />
       )}
     </button>
   );

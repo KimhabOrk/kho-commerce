@@ -51,20 +51,20 @@ export function CollectionSection() {
   return (
     <section id="accessories" className="bg-background">
       {/* Section Title */}
-      <div className="px-4 sm:px-6 py-12 sm:py-20 md:px-12 lg:px-20 md:py-10">
-        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-foreground md:text-4xl">
+      <div className="px-4 md:px-6 py-12 md:py-20 md:px-12 lg:px-20 md:py-10">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground md:text-4xl">
           Essential Accessories
         </h2>
       </div>
 
       {/* Accessories Grid/Carousel */}
-      <div className="pb-12 sm:pb-24">
+      <div className="pb-12 md:pb-24">
         {/* Mobile: Horizontal Carousel */}
-        <div className="flex gap-4 sm:gap-6 overflow-x-auto px-4 sm:px-6 pb-4 md:hidden snap-x snap-mandatory scrollbar-hide">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto px-4 md:px-6 pb-4 md:hidden snap-x snap-mandatory scrollbar-hide">
           {accessories.map((accessory) => (
-            <div key={accessory.id} className="group flex-shrink-0 w-[75vw] sm:w-[65vw] snap-center">
+            <div key={accessory.id} className="group flex-shrink-0 w-[75vw] md:w-[65vw] snap-center">
               {/* Image */}
-              <div className="relative aspect-[2/3] overflow-hidden rounded-lg sm:rounded-2xl bg-secondary">
+              <div className="relative aspect-[2/3] overflow-hidden rounded-lg md:rounded-2xl bg-secondary">
                 <FadeImage
                   src={accessory.image || "/placeholder.svg"}
                   alt={accessory.name}
@@ -74,17 +74,17 @@ export function CollectionSection() {
               </div>
 
               {/* Content */}
-              <div className="py-3 sm:py-6">
-                <div className="flex items-start justify-between gap-3 sm:gap-4">
+              <div className="py-3 md:py-6">
+                <div className="flex items-start justify-between gap-3 md:gap-4">
                   <div className="flex-1">
-                    <h3 className="text-sm sm:text-lg font-medium leading-snug text-foreground">
+                    <h3 className="text-sm md:text-lg font-medium leading-snug text-foreground">
                       {accessory.name}
                     </h3>
-                    <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground">
+                    <p className="mt-1 md:mt-2 text-xs md:text-sm text-muted-foreground">
                       {accessory.description}
                     </p>
                   </div>
-                  <span className="text-sm sm:text-lg font-medium text-foreground whitespace-nowrap">
+                  <span className="text-sm md:text-lg font-medium text-foreground whitespace-nowrap">
                     {accessory.price}
                   </span>
                 </div>

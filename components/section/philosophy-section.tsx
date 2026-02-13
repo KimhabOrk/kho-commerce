@@ -99,7 +99,7 @@ export function PhilosophySection() {
             )}
 
             {/* Product Grid */}
-            <div className="relative z-10 grid grid-cols-1 gap-4 px-4 sm:px-6 md:grid-cols-2 md:px-12 lg:px-20">
+            <div className="relative z-10 grid grid-cols-1 gap-4 px-4 md:px-6 md:grid-cols-2 md:px-12 lg:px-20">
               {/* Alpine Image - comes from left */}
               <div 
                 className="relative aspect-[4/3] overflow-hidden rounded-2xl"
@@ -151,12 +151,12 @@ export function PhilosophySection() {
       </div>
 
       {/* Description */}
-      <div className="px-4 sm:px-6 py-12 md:px-12 md:py-28 lg:px-20 lg:py-36 lg:pb-14">
+      <div className="px-4 md:px-6 py-12 md:px-12 md:py-28 lg:px-20 lg:py-36 lg:pb-14">
         <div className="text-center">
           <p className="text-xs uppercase tracking-widest text-muted-foreground">
             First generation
           </p>
-          <p className="mt-6 sm:mt-8 leading-relaxed text-muted-foreground text-lg sm:text-xl md:text-2xl lg:text-3xl text-center">
+          <p className="mt-6 md:mt-8 leading-relaxed text-muted-foreground text-lg md:text-xl md:text-2xl lg:text-3xl text-center">
             Alpine & Forest are high-tech outdoor accessories designed for modern adventurers. 
             Lightweight, durable, and engineered for extreme conditions.
           </p>

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
 
-      <section className="relative h-[60vh] sm:h-[70vh] flex items-center justify-center bg-black overflow-hidden">
+      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center bg-black overflow-hidden">
         {/* YouTube video background */}
         <div className="absolute inset-0 w-full h-full">
           <iframe
@@ -26,23 +26,23 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-4 text-white">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 sm:mb-6 tracking-tight text-balance drop-shadow-lg">
+          <h1 className="font-serif text-4xl md:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 tracking-tight text-balance drop-shadow-lg">
             Refined Simplicity
           </h1>
-          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-balance drop-shadow-md text-white/90">
+          <p className="text-base md:text-lg md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto text-balance drop-shadow-md text-white/90">
             Discover timeless pieces crafted for the modern wardrobe
           </p>
-          <Button asChild size="lg" className="h-11 sm:h-12 px-6 sm:px-8 rounded-2xl text-sm sm:text-base">
+          <Button asChild size="lg" className="h-11 md:h-12 px-6 md:px-8 rounded-2xl text-sm md:text-base">
             <Link href="/shop">Explore Collection</Link>
           </Button>
         </div>
       </section>
 
       {/* Featured Products */}
-      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24">
-        <div className="flex items-center justify-between mb-8 sm:mb-12">
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold">New Arrivals</h2>
-          <Button variant="ghost" asChild className="text-sm sm:text-base">
+      <section className="container mx-auto px-4 md:px-6 py-12 md:py-16 md:py-24">
+        <div className="flex items-center justify-between mb-8 md:mb-12">
+          <h2 className="font-serif text-2xl md:text-3xl md:text-4xl font-semibold">New Arrivals</h2>
+          <Button variant="ghost" asChild className="text-sm md:text-base">
             <Link href="/shop">View All</Link>
           </Button>
         </div>

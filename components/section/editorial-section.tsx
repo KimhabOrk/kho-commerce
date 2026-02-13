@@ -14,22 +14,22 @@ export function EditorialSection() {
       
 
       {/* Decorative Icons */}
-      <div className="flex items-center justify-center gap-4 sm:gap-6 pb-12 sm:pb-20">
+      <div className="flex items-center justify-center gap-4 md:gap-6 pb-12 md:pb-20">
         
         
       </div>
 
       {/* Specs Grid - responsive columns */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 border-t border-border">
+      <div className="grid grid-cols-2 md:grid-cols-4 border-t border-border">
         {specs.map((spec) => (
           <div
             key={spec.label}
-            className="border-b border-r border-border p-4 sm:p-6 md:p-8 text-center last:border-r-0"
+            className="border-b border-r border-border p-4 md:p-6 md:p-8 text-center last:border-r-0"
           >
-            <p className="mb-1 sm:mb-2 text-xs uppercase tracking-widest text-muted-foreground">
+            <p className="mb-1 md:mb-2 text-xs uppercase tracking-widest text-muted-foreground">
               {spec.label}
             </p>
-            <p className="font-medium text-foreground text-2xl sm:text-3xl md:text-4xl">
+            <p className="font-medium text-foreground text-2xl md:text-3xl md:text-4xl">
               {spec.value}
             </p>
           </div>

@@ -1,4 +1,4 @@
-# Thudarum - Minimalist Fashion E-commerce
+# Kimhab Ork - Minimalist Fashion E-commerce
 
 A modern Next.js e-commerce application integrated with Shopify Storefront API.
 

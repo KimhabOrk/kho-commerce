@@ -4,8 +4,8 @@ import { ContactForm } from "@/components/contact-form"
 import { Mail, MapPin, Phone, ArrowLeft } from "lucide-react"
 
 export const metadata = {
-  title: "Contact Us - Thudarum",
-  description: "Get in touch with Thudarum. We'd love to hear from you.",
+  title: "Contact Us - Kimhab Ork",
+  description: "Get in touch with Kimhab Ork. We'd love to hear from you.",
 }
 
 export default function ContactPage() {
@@ -13,18 +13,18 @@ export default function ContactPage() {
     <div className="min-h-screen">
       
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24">
-        <div className="text-center mb-12 sm:mb-16">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 tracking-tight">
+      <section className="container mx-auto px-4 md:px-6 py-12 md:py-16 md:py-24">
+        <div className="text-center mb-12 md:mb-16">
+          <h1 className="font-serif text-4xl md:text-5xl md:text-6xl font-semibold mb-4 tracking-tight">
             Get in Touch
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Have questions about our collections? We're here to help. Reach out to us and we'll get back to you as soon as possible.
           </p>
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-2 gap-4 mb-16 sm:mb-20">
+        <div className="grid grid-cols-2 gap-4 mb-16 md:mb-20">
           {/* Email */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
@@ -64,8 +64,8 @@ export default function ContactPage() {
 
         {/* Contact Form Section */}
         <div className="max-w-6xl mx-auto">
-          <div className="bg-muted rounded-2xl p-8 sm:p-12">
-            <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-8 text-center">
+          <div className="bg-muted rounded-2xl p-8 md:p-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-8 text-center">
               Send us a Message
             </h2>
             <ContactForm />
@@ -74,16 +74,16 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 border-t border-border">
+      <section className="container mx-auto px-4 md:px-6 py-12 md:py-16 md:py-24 border-t border-border">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-12 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center">
             Frequently Asked Questions
           </h2>
           
           <div className="space-y-8">
             {/* FAQ Item 1 */}
             <div>
-              <h3 className="font-serif text-lg sm:text-xl font-semibold mb-2">
+              <h3 className="font-serif text-lg md:text-xl font-semibold mb-2">
                 How long does shipping take?
               </h3>
               <p className="text-muted-foreground">
@@ -93,7 +93,7 @@ export default function ContactPage() {
 
             {/* FAQ Item 2 */}
             <div>
-              <h3 className="font-serif text-lg sm:text-xl font-semibold mb-2">
+              <h3 className="font-serif text-lg md:text-xl font-semibold mb-2">
                 What is your return policy?
               </h3>
               <p className="text-muted-foreground">
@@ -103,7 +103,7 @@ export default function ContactPage() {
 
             {/* FAQ Item 3 */}
             <div>
-              <h3 className="font-serif text-lg sm:text-xl font-semibold mb-2">
+              <h3 className="font-serif text-lg md:text-xl font-semibold mb-2">
                 Do you offer custom tailoring?
               </h3>
               <p className="text-muted-foreground">
@@ -113,7 +113,7 @@ export default function ContactPage() {
 
             {/* FAQ Item 4 */}
             <div>
-              <h3 className="font-serif text-lg sm:text-xl font-semibold mb-2">
+              <h3 className="font-serif text-lg md:text-xl font-semibold mb-2">
                 How can I track my order?
               </h3>
               <p className="text-muted-foreground">

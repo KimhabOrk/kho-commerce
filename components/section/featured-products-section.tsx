@@ -39,19 +39,19 @@ export function FeaturedProductsSection() {
   return (
     <section id="technology" className="bg-background">
       {/* Section Title */}
-      <div className="px-4 sm:px-6 py-12 sm:py-20 text-center md:px-12 md:py-28 lg:px-20 lg:py-32 lg:pb-20">
-        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl">
+      <div className="px-4 md:px-6 py-12 md:py-20 text-center md:px-12 md:py-28 lg:px-20 lg:py-32 lg:pb-20">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground md:text-4xl lg:text-5xl">
           Engineered for Excellence.
           <br />
           Designed for Adventure.
         </h2>
-        <p className="mx-auto mt-4 sm:mt-6 max-w-md text-xs sm:text-sm text-muted-foreground">
+        <p className="mx-auto mt-4 md:mt-6 max-w-md text-xs md:text-sm text-muted-foreground">
           Technology
         </p>
       </div>
 
       {/* Features Grid - responsive columns */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 px-4 sm:px-6 pb-12 sm:pb-20 md:grid-cols-3 md:px-12 lg:px-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 px-4 md:px-6 pb-12 md:pb-20 md:grid-cols-3 md:px-12 lg:px-20">
         {features.map((feature) => (
           <div key={feature.title} className="group">
             {/* Image */}
@@ -65,11 +65,11 @@ export function FeaturedProductsSection() {
             </div>
 
             {/* Content */}
-            <div className="py-4 sm:py-6">
-              <p className="mb-1 sm:mb-2 text-xs uppercase tracking-widest text-muted-foreground">
+            <div className="py-4 md:py-6">
+              <p className="mb-1 md:mb-2 text-xs uppercase tracking-widest text-muted-foreground">
                 {feature.description}
               </p>
-              <h3 className="text-foreground text-base sm:text-lg md:text-xl font-semibold">
+              <h3 className="text-foreground text-base md:text-lg md:text-xl font-semibold">
                 {feature.title}
               </h3>
             </div>

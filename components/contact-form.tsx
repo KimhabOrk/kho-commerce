@@ -217,7 +217,7 @@ export function ContactForm() {
       <Button
         type="submit"
         disabled={isLoading}
-        className="w-full sm:w-auto"
+        className="w-full md:w-auto"
       >
         {isLoading ? (
           <>

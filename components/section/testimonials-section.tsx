@@ -6,15 +6,15 @@ export function TestimonialsSection() {
   return (
     <section id="about" className="bg-background">
       {/* Large Text Statement */}
-      <div className="px-4 sm:px-6 py-12 sm:py-24 md:px-12 md:py-32 lg:px-20 lg:py-40">
-        <p className="mx-auto max-w-5xl text-lg sm:text-2xl leading-relaxed text-foreground md:text-3xl lg:text-[2.5rem] lg:leading-snug">
+      <div className="px-4 md:px-6 py-12 md:py-24 md:px-12 md:py-32 lg:px-20 lg:py-40">
+        <p className="mx-auto max-w-5xl text-lg md:text-2xl leading-relaxed text-foreground md:text-3xl lg:text-[2.5rem] lg:leading-snug">
           Alpine & Forest accessories combine aerospace-grade materials with cutting-edge technology — 
           designed for explorers who refuse to compromise on quality or performance in the wild.
         </p>
       </div>
 
       {/* About Image */}
-      <div className="relative aspect-video sm:aspect-[16/9] w-full">
+      <div className="relative aspect-video md:aspect-[16/9] w-full">
         <Image
           src="/images/3d4046a0-b072-4b07-941f-9141ee3ed4a7.png"
           alt="Mountain peaks at sunrise"
