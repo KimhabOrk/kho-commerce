@@ -13,12 +13,6 @@ export default function ShopPage() {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
-        <Button variant="ghost" asChild className="mb-4">
-          <Link href="/">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Link>
-        </Button>
 
         <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-8">Shop</h1>
 

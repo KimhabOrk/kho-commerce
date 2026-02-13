@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { getCollections } from "@/lib/shopify"
 
+{/*
 const fallbackCollections = [
   {
     handle: "executive",
@@ -30,10 +31,10 @@ const fallbackCollections = [
     description: "Luxurious velvet and satin pieces designed to make a statement at formal occasions.",
     image: "/thudarum-navy-velvet-blazer.jpg",
   },
-]
+] */}
 
 export default async function CollectionsPage() {
-  let collections = fallbackCollections
+  // let collections = fallbackCollections
 
   try {
     const shopifyCollections = await getCollections()
@@ -56,13 +57,6 @@ export default async function CollectionsPage() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 md:px-6 py-12 md:py-16 md:py-24">
-        <Button variant="ghost" asChild className="mb-6">
-          <Link href="/">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Link>
-        </Button>
-
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 md:mb-24">
           <h1 className="font-serif text-4xl md:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 tracking-tight">
             Collections
@@ -73,7 +67,7 @@ export default async function CollectionsPage() {
         </div>
 
         {/* Collections Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 lg:gap-12">
           {collections.map((collection) => (
             <Link key={collection.handle} href={`/collections/${collection.handle}`} className="group">
               <div className="relative aspect-[4/5] overflow-hidden bg-secondary mb-4">

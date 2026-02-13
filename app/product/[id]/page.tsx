@@ -5,6 +5,7 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { getProduct, getProducts } from "@/lib/shopify"
 
+{/*
 const fallbackProducts = [
   {
     id: "1",
@@ -109,6 +110,7 @@ const fallbackProducts = [
     sizes: ["38", "40", "42", "44", "46", "48"],
   },
 ]
+*/}
 
 export async function generateStaticParams() {
   try {
@@ -118,9 +120,9 @@ export async function generateStaticParams() {
     }))
   } catch (error) {
     console.error('Failed to generate static params:', error)
-    return fallbackProducts.slice(0, 8).map((product) => ({
+    {/* return fallbackProducts.slice(0, 8).map((product) => ({
       id: product.id,
-    }))
+    })) */}
   }
 }
 
@@ -141,16 +143,16 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     console.error('Error generating metadata:', error)
   }
 
-  const fallback = fallbackProducts.find((p) => p.id === id)
+  {/* const fallback = fallbackProducts.find((p) => p.id === id)
   return {
     title: fallback?.name || 'Product',
     description: fallback?.description || 'Premium fashion product',
-  }
+  } */}
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  let product = fallbackProducts.find((p) => p.id === id)
+  // let product = fallbackProducts.find((p) => p.id === id)
 
   try {
     const shopifyProduct = await getProduct(id)
