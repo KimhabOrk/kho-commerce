@@ -1,6 +1,6 @@
 import type React from "react"
 import { CartProvider as ShopifyCartProvider, useCart } from "./cart/cart-context"
-import type { Cart } from "lib/shopify/types"
+import type { Cart } from "@/lib/shopify/types"
 
 // Re-export useCart for backward compatibility
 export { useCart }

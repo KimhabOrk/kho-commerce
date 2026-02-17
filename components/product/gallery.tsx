@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { GridTileImage } from '@/components/grid/tile';
 import { useProduct, useUpdateURL } from '@/components/product/product-context';
 import Image from 'next/image';

@@ -4,8 +4,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { ShoppingBag, User, Menu } from "lucide-react"
 import { useCart } from "./cart-provider"
-import { Button } from "./ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useState } from "react"
 
 export function Header() {
