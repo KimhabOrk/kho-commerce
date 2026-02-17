@@ -59,7 +59,7 @@ export function GallerySection() {
   ];
 
   return (
-    <section className="relative max-w-screen bg-background">
+    <section className="relative max-w-screen bg-background px-6 md:px-8 lg:px-10">
       <div className="py-8 md:py-10 md:py-12">
         <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground lg:text-4xl">
           Featured Looks
