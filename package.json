@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "kimhab-ork",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -47,7 +47,6 @@
     "input-otp": "1.4.1",
     "lib": "5.1.0",
     "lucide-react": "^0.454.0",
-    "motion": "lastest",
     "next": "16.0.10",
     "next-themes": "^0.4.6",
     "react": "19.2.0",
