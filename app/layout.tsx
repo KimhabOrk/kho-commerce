@@ -17,12 +17,6 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700"],
 })
 
-export const metadata: Metadata = {
-  title: "Kimhab Ork - Affordable Luxury Womenswear",
-  description: "An affordable luxury womenswear dedicates to quality, bold, and empowering women through fashion.",
-  
-}
-
 export const viewport: Viewport = {
   themeColor: "#000000",
   width: "device-width",
@@ -35,10 +29,10 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
       template: "%s || Kimhab Ork - Affordable Luxury Womenswear",
-      default: "Kimhab Ork - Affordable Luxury Womenswear",
+      default: "Kimhab Ork - An Affordable Luxury Womenswear Dedicates to Quality and Responsibilities. Offering Bold, Elegant And Fragile To Empower Women Through Fashion.",
     },
     description:
-      "Kimhab Ork - An affordable luxury womenswear dedicates to quality, bold, and empowering women through fashion.",
+      "Kimhab Ork - An Affordable Luxury Womenswear Dedicates to Quality and Responsibilities. Offering Bold, Elegant And Fragile To Empower Women Through Fashion.",
     authors: [{ name: "Kimhab Ork - Affordable Luxury Womenswear" }],
     referrer: "origin-when-cross-origin",
     applicationName: "Kimhab Ork - Affordable Luxury Womenswear",
@@ -59,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Kimhab Ork - Affordable Luxury Womenswear",
       siteName: "Kimhab Ork - Affordable Luxury Womenswear",
       description:
-        "Kimhab Ork - An affordable luxury womenswear dedicates to quality, bold, and empowering women through fashion.",
+        "Kimhab Ork - An Affordable Luxury Womenswear Dedicates to Quality and Responsibilities. Offering Bold, Elegant And Fragile To Empower Women Through Fashion.",
       images: {
         url: "https://ik.imagekit.io/kimhabork/media/profile/og.png",
         width: 1920,
@@ -74,7 +68,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       creator: "@kimhab_ork",
       description:
-        "Kimhab Ork - An affordable luxury womenswear dedicates to quality, bold, and empowering women through fashion.",
+        "Kimhab Ork - An Affordable Luxury Womenswear Dedicates to Quality and Responsibilities. Offering Bold, Elegant And Fragile To Empower Women Through Fashion.",
       images: ["https://res.cloudinary.com/dk6p9zvfv/image/upload/v1762549370/assets/img/og.png"],
     },
     alternates: {
@@ -257,7 +251,7 @@ export default function RootLayout({
               url: "https://www.kimhab.com",
               logo: "https://kimhab.com/logo-dark.png",
               description:
-                "An affordable luxury womenswear dedicates to quality, bold, and empowering women through fashion.",
+                "An Affordable Luxury Womenswear Dedicates to Quality and Responsibilities. Offering Bold, Elegant And Fragile To Empower Women Through Fashion.",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "St 183, Veal Sbov",
