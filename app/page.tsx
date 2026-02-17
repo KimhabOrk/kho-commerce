@@ -4,24 +4,26 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ProductGrid } from "@/components/product-grid"
 import { useRef } from "react"
+import { GallerySection } from "@/components/home-gallery"
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   return (
     <div className="min-h-screen">
-
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center bg-black overflow-hidden">
         {/* YouTube video background */}
         <div className="absolute inset-0 w-full h-full">
-          <iframe
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
-            src="https://www.youtube.com/embed/u9FEg5qur14?autoplay=1&mute=1&loop=1&playlist=u9FEg5qur14&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-            // https://www.youtube.com/embed/SU1zDB5Iokk?si=0sFxytnAu7ACwiVj&amp;controls=0
-            title="Background video"
-            allow="autoplay; encrypted-media"
-            style={{ pointerEvents: "none" }}
-          />
+          <video
+            ref={videoRef}
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="https://ik.imagekit.io/kimhabork/assets/main.mp4" type="video/mp4" />
+          </video>
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -50,19 +52,8 @@ export default function Home() {
         <ProductGrid />
       </section>
 
-      <section className="container mx-auto px-2 md:px-4 lg:px-6 py-10 md:py-14 lg:py-24">
-        <div className="flex items-center justify-between mx-auto w-full h-auto">
-          <video
-            ref={videoRef}
-            className="w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="https://ik.imagekit.io/kimhabork/assets/runway-campaign.mp4" type="video/mp4" />
-          </video>
-        </div>
+      <section className="container mx-auto py-10 md:py-14 lg:py-24">
+        <GallerySection />
       </section>
     </div>
   )
