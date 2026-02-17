@@ -65,7 +65,7 @@ export function GallerySection() {
           Featured Looks
         </h2>
       </div>
-      <div className="pb-8 md:pb-12">
+      <div className="pb-10 md:pb-12">
         <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
           {features.map((feature) => (
             <div key={feature.title} className="group">
@@ -77,13 +77,6 @@ export function GallerySection() {
                   fill
                   className="object-cover group-hover:scale-105"
                 />
-              </div>
-
-              {/* Content */}
-              <div className="py-4 md:py-6">
-                <p className="text-sm md:text-md uppercase tracking-widest text-foreground">
-                  {feature.title}
-                </p>
               </div>
             </div>
           ))}
