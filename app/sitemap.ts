@@ -1,5 +1,5 @@
-import { getCollections, getPages, getProducts } from "lib/shopify";
-import { baseUrl, validateEnvironmentVariables } from "lib/utils";
+import { getCollections, getPages, getProducts } from "@/lib/shopify";
+import { validateEnvironmentVariables } from "@/lib/utils";
 import { MetadataRoute } from "next";
 
 type Route = {
@@ -11,6 +11,7 @@ export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   validateEnvironmentVariables();
+  const baseUrl = "https://kimhab.com"
 
   const routesMap = [""].map((route) => ({
     url: `${baseUrl}${route}`,

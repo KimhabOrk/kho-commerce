@@ -1,4 +1,4 @@
-import { baseUrl } from "lib/utils";
+const baseUrl = "https://kimhab.com"
 
 export default function robots() {
   return {
