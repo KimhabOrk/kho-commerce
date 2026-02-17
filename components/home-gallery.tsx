@@ -70,7 +70,7 @@ export function GallerySection() {
           {features.map((feature) => (
             <div key={feature.title} className="group">
               {/* Image */}
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+              <div className="relative aspect-[2/3] overflow-hidden rounded-2xl">
                 <FadeImage
                   src={feature.image || "/placeholder.svg"}
                   alt={feature.title}
