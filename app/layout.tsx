@@ -55,7 +55,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Kimhab Ork - An Affordable Luxury Womenswear Dedicates to Quality and Responsibilities. Offering Bold, Elegant And Fragile To Empower Women Through Fashion.",
       images: {
-        url: "https://ik.imagekit.io/kimhabork/media/profile/og.png",
+        url: "https://ik.imagekit.io/kimhabork/assets/kimhab_ork_og.png?updatedAt=1771357781893",
         width: 1920,
         height: 1000,
       },
@@ -69,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
       creator: "@kimhab_ork",
       description:
         "Kimhab Ork - An Affordable Luxury Womenswear Dedicates to Quality and Responsibilities. Offering Bold, Elegant And Fragile To Empower Women Through Fashion.",
-      images: ["https://res.cloudinary.com/dk6p9zvfv/image/upload/v1762549370/assets/img/og.png"],
+      images: ["https://ik.imagekit.io/kimhabork/assets/kimhab_ork_og.png?updatedAt=1771357781893"],
     },
     alternates: {
       canonical: "https://www.kimhab.com",

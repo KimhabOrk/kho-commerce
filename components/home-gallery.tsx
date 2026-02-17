@@ -62,8 +62,8 @@ export function GallerySection() {
     <section className="relative max-w-screen bg-background">
       <div className="flex mx-auto justify-center items-center px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <div key={index} className="group">
+          {features.map((feature) => (
+            <div key={feature.title} className="group">
               {/* Image */}
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <FadeImage
