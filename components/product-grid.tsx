@@ -4,70 +4,12 @@ import { unstable_cache } from "next/cache"
 
 type MappedProduct = {
   id: string;
+  handle: string;
   name: string;
   price: number;
   image: string;
   category: string;
 }
-
-const fallbackProducts: MappedProduct[] = [
-  {
-    id: "1",
-    name: "Classic Double-Breasted Suit",
-    price: 1289,
-    image: "/thudarum-taupe-suit-hero.jpg",
-    category: "Suits",
-  },
-  {
-    id: "2",
-    name: "Heritage Green Check Blazer",
-    price: 895,
-    image: "/thudarum-green-check-blazer.jpg",
-    category: "Blazers",
-  },
-  {
-    id: "3",
-    name: "Luxe Evening Suit",
-    price: 1545,
-    image: "/thudarum-burgundy-evening-suit.jpg",
-    category: "Suits",
-  },
-  {
-    id: "4",
-    name: "Textured Blazer",
-    price: 795,
-    image: "/thudarum-sky-blue-blazer.jpg",
-    category: "Blazers",
-  },
-  {
-    id: "5",
-    name: "Blazer with Cream Trousers",
-    price: 985,
-    image: "/thudarum-burgundy-blazer-combo.jpg",
-    category: "Separates",
-  },
-  {
-    id: "6",
-    name: "Double-Breasted Jacket",
-    price: 1195,
-    image: "/thudarum-navy-velvet-blazer.jpg",
-    category: "Blazers",
-  },
-  {
-    id: "7",
-    name: "Double-Breasted Suit",
-    price: 1345,
-    image: "/thudarum-gray-suit-refined.jpg",
-    category: "Suits",
-  },
-  {
-    id: "8",
-    name: "Modern Blazer Set",
-    price: 1095,
-    image: "/thudarum-slate-blazer-set.jpg",
-    category: "Separates",
-  },
-]
 
 // Cache products for 1 hour with revalidation tag
 const getCachedProducts = unstable_cache(
@@ -76,7 +18,7 @@ const getCachedProducts = unstable_cache(
       return await getProducts()
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error)
-      console.error("[v0] Error in getCachedProducts:", errorMessage)
+      console.error("Error in getCachedProducts:", errorMessage)
       return null
     }
   },
@@ -86,12 +28,13 @@ const getCachedProducts = unstable_cache(
 
 /**
  * Transform Shopify product data into the format used by ProductCard
+ * Uses product handle for routing instead of ID
  */
 function transformShopifyProduct(product: any): MappedProduct | null {
   try {
-    // Validate required fields
-    if (!product?.id || !product?.title) {
-      console.warn("[v0] Product missing required fields - id or title:", { id: product?.id, title: product?.title })
+    // Validate required fields - handle is crucial for routing
+    if (!product?.handle || !product?.title) {
+      console.warn("Product missing required fields - handle or title:", { handle: product?.handle, title: product?.title })
       return null
     }
 
@@ -115,14 +58,15 @@ function transformShopifyProduct(product: any): MappedProduct | null {
       || "Products"
 
     return {
-      id: product.id,
+      id: product.handle,
+      handle: product.handle,
       name: product.title.trim(),
       price,
       image: imageUrl,
       category,
     }
   } catch (error) {
-    console.error("[v0] Error transforming product:", { product, error })
+    console.error("Error transforming product:", { product, error })
     return null
   }
 }
@@ -133,7 +77,7 @@ interface ProductGridProps {
 }
 
 export async function ProductGrid({ query = "", sortBy = "" }: ProductGridProps = {}) {
-  let products: MappedProduct[] = fallbackProducts
+  let products: MappedProduct[] = []
 
   try {
     const shopifyProducts = await getCachedProducts()
@@ -145,10 +89,14 @@ export async function ProductGrid({ query = "", sortBy = "" }: ProductGridProps 
 
       if (mappedProducts.length > 0) {
         products = mappedProducts
+      } else {
+        throw new Error("No valid products found after transformation")
       }
+    } else {
+      throw new Error("No products returned from Shopify API")
     }
   } catch (error) {
-    console.error("[v0] Failed to fetch Shopify products:", error)
+    console.error("Failed to fetch Shopify products. Please ensure SHOPIFY_STOREFRONT_ACCESS_TOKEN is set:", error)
   }
 
   // Filter by search query
@@ -172,14 +120,19 @@ export async function ProductGrid({ query = "", sortBy = "" }: ProductGridProps 
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+    <div className="w-full">
       {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+          {filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       ) : (
-        <div className="col-span-full py-12 text-center">
-          <p className="text-muted-foreground">No products found matching your criteria.</p>
+        <div className="col-span-full py-12 text-center border border-dashed border-muted-foreground/30 rounded-lg">
+          <p className="text-muted-foreground mb-4">Unable to load products from Shopify.</p>
+          <p className="text-sm text-muted-foreground">
+            Please ensure SHOPIFY_STOREFRONT_ACCESS_TOKEN environment variable is set.
+          </p>
         </div>
       )}
     </div>

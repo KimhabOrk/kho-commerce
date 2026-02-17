@@ -66,6 +66,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ han
                 key={product.id}
                 product={{
                   id: product.id,
+                  handle: product.handle,
                   name: product.title,
                   price: product.priceRange?.minVariantPrice?.amount
                     ? parseFloat(product.priceRange.minVariantPrice.amount)

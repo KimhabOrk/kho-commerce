@@ -17,6 +17,7 @@ export default function Home() {
           <iframe
             className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
             src="https://www.youtube.com/embed/u9FEg5qur14?autoplay=1&mute=1&loop=1&playlist=u9FEg5qur14&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            // https://www.youtube.com/embed/SU1zDB5Iokk?si=0sFxytnAu7ACwiVj&amp;controls=0
             title="Background video"
             allow="autoplay; encrypted-media"
             style={{ pointerEvents: "none" }}

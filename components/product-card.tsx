@@ -12,6 +12,7 @@ import { useState } from "react"
 
 interface Product {
   id: string
+  handle: string
   name: string
   price: number
   image: string
@@ -51,7 +52,7 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="group relative">
-      <Link href={`/product/${product.id}`}>
+      <Link href={`/product/${product.handle}`}>
         <div className="relative aspect-[3/4] overflow-hidden bg-secondary mb-4">
           <Image
             src={product.image || "/placeholder.svg"}
