@@ -78,6 +78,13 @@ export function GallerySection() {
                   className="object-cover group-hover:scale-105"
                 />
               </div>
+
+              {/* Content */}
+              <div className="py-4 md:py-6">
+                <p className="text-xs md:text-sm uppercase tracking-widest text-foreground text-wrap">
+                  {feature.title}
+                </p>
+              </div>
             </div>
           ))}
         </div>
