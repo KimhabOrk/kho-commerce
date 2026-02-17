@@ -60,8 +60,13 @@ export function GallerySection() {
 
   return (
     <section className="relative max-w-screen bg-background">
-      <div className="flex mx-auto justify-center items-center px-6 md:px-8 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 md:grid-cols-3">
+      <div className="py-8 md:py-10 md:py-12">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground lg:text-4xl">
+          Featured Looks
+        </h2>
+      </div>
+      <div className="pb-8 md:pb-12">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
           {features.map((feature) => (
             <div key={feature.title} className="group">
               {/* Image */}
@@ -76,7 +81,7 @@ export function GallerySection() {
 
               {/* Content */}
               <div className="py-4 md:py-6">
-                <p className="text-md uppercase tracking-widest text-foreground">
+                <p className="text-sm md:text-md uppercase tracking-widest text-foreground">
                   {feature.title}
                 </p>
               </div>

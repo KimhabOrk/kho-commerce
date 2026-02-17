@@ -52,7 +52,7 @@ export default function Home() {
         <ProductGrid />
       </section>
 
-      <section className="container mx-auto py-10 md:py-14 lg:py-24">
+      <section className="container mx-auto px-6 md:px-8 lg:px-10 py-10 md:py-14 lg:py-24">
         <GallerySection />
       </section>
     </div>
