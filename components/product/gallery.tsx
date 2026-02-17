@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { GridTileImage } from '@/components/grid/tile';
+import { GridTileImage } from '@/components/grid/title';
 import { useProduct, useUpdateURL } from '@/components/product/product-context';
 import Image from 'next/image';
 
